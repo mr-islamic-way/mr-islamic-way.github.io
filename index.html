@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.R Islamic Way</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#home">🌙 <span>M.R Islamic Way</span></a>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+  <nav>
+    <a href="#home">Home</a><a href="#books">Books / PDF</a><a href="#videos">Videos</a>
+    <a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#login">Login</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <h1>M.R Islamic Way</h1>
+    <p>ইসলামী জ্ঞান, কিতাব, উপকারী ছবি ও ভিডিও—একটি সহজ প্ল্যাটফর্মে।</p>
+    <div><a class="btn" href="#gallery">ছবি দেখুন</a><a class="btn light" href="#videos">ভিডিও দেখুন</a></div>
+  </div>
+</section>
+
+<section class="search"><div class="wrap">
+<h2>🔎 Islamic Content Search</h2>
+<input id="q" oninput="search()" placeholder="বই, বিষয়, ছবি বা ভিডিও খুঁজুন...">
+<p id="count"></p>
+</div></section>
+
+<section id="books" class="section"><div class="wrap">
+<h2>📚 Books / PDF</h2>
+<div class="notice">এখনো PDF যোগ করা হয়নি। পরে PDF/কিতাব দিলে এখানে বইয়ের নাম, কভার ও Read/Download button যোগ করা যাবে।</div>
+<div class="empty">📖<br><b>Coming Soon</b><br>Islamic PDF Library</div>
+</div></section>
+
+<section id="videos" class="section alt"><div class="wrap">
+<h2>🎥 Islamic Videos</h2>
+<div class="cards">
+<article class="card searchable"><div class="video">▶</div><h3>Islamic Reminder</h3><p>YouTube video link পরে এখানে যোগ করা যাবে।</p></article>
+<article class="card searchable"><div class="video">▶</div><h3>Qur'an / Hadith Lesson</h3><p>তোমার ভিডিওগুলো এখানে সাজানো যাবে।</p></article>
+<article class="card searchable"><div class="video">▶</div><h3>Islamic Lecture</h3><p>ভিডিওর thumbnail ও title যোগ করা যাবে।</p></article>
+</div></div></section>
+
+<section id="gallery" class="section"><div class="wrap">
+<h2>🖼️ Islamic Gallery</h2>
+<div class="gallery">
+<figure class="searchable"><img src="images/dress-guide.png"><figcaption>পুরুষের পোশাক ও সতর সম্পর্কে চার মাযহাবের সংক্ষিপ্ত তথ্য</figcaption></figure>
+<figure class="searchable"><img src="images/dress-guide-urdu.png"><figcaption>مرد کے لباس کے احکام — تعلیمی چارٹ</figcaption></figure>
+<figure class="searchable"><img src="images/namaz-reminder.jpg"><figcaption>নামাজের গুরুত্ব — Reminder</figcaption></figure>
+</div></div></section>
+
+<section id="about" class="section about"><div class="wrap grid">
+<div><p class="label">ABOUT</p><h2>M.R Islamic Way</h2></div>
+<div><p>এই website-এ উপকারী ইসলামী কিতাব, PDF, ছবি, ভিডিও এবং শিক্ষামূলক content সুন্দরভাবে সংরক্ষণ ও প্রদর্শন করা হবে।</p><p class="arabic">وَقُلْ رَبِّ زِدْنِي عِلْمًا</p><p>“হে আমার রব, আমার জ্ঞান বৃদ্ধি করুন।” — সূরা ত্ব-হা ২০:১১৪</p></div>
+</div></section>
+
+<section id="contact" class="section"><div class="wrap narrow">
+<h2>📞 Contact</h2><form onsubmit="event.preventDefault();document.getElementById('msg').textContent='Message form demo হিসেবে কাজ করছে। Backend যোগ করলে সত্যিকারের message receive করা যাবে.'">
+<input required placeholder="আপনার নাম"><input required type="email" placeholder="Email"><textarea required placeholder="আপনার Message"></textarea><button class="btn">Send Message</button><p id="msg"></p>
+</form></div></section>
+
+<section id="login" class="section alt"><div class="wrap narrow">
+<h2>🔐 Login</h2><form onsubmit="event.preventDefault();document.getElementById('loginmsg').textContent='এটি এখন demo login. Secure backend/database পরে যোগ করতে হবে.'">
+<input required type="email" placeholder="Email"><input required type="password" placeholder="Password"><button class="btn">Login</button><p id="loginmsg"></p>
+</form></div></section>
+
+<footer><div class="wrap"><b>🌙 M.R Islamic Way</b><p>Beneficial Islamic knowledge.</p><small>© <span id="year"></span> M.R Islamic Way</small></div></footer>
+<script src="script.js"></script>
+</body></html>
